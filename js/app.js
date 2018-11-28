@@ -7,11 +7,17 @@ function loadTasks(taskList){
         let divTask = document.createElement('div');
         divTask.className="taskCard";
         divTask.innerHTML = `
-            ${task.img?"<img src='" + task.img + "' />":""}
-            <h4> <input type="checkbox" ${task.completed?"checked":""} title="check completed">  ${task.title + ' ' + i}</h4>
-            <span>created on ${task.createdOn} by ${task.createdBy}</span>
-            <p>${task.description}</p>
-            <span>Due on ${task.dueDate}</span>            
+            <article>
+                <header class="centered-text task-title">
+                    ${task.img?"<img src='" + task.img + "' />":""}
+                    <h4> <input type="checkbox" ${task.completed?"checked":""} title="check completed">  ${task.title + ' ' + i}</h4>
+                <header>
+                <span class="task-dates">created on ${task.createdOn} by ${task.createdBy}</span>
+                <div class="task-description">
+                    <p>${task.description}</p>
+                </div>
+                <span class="task-dates">Due on ${task.dueDate}</span>   
+            </article>         
         `;
 
         if(task.completed)

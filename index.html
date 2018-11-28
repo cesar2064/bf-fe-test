@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-
-
 </head>
 
 <body>
     <main>
         <section>
             <header class="centered-text">
-                <h1>Task List</h1>
-                <button onclick="addTask({title:'My New Task!',description:'This is my new task',img:'https://picsum.photos/1600/900?v99'})">Add
-                    Task</button>
+                <h1>Task List <button class="add-button" onclick="addTask({title:'My New Task!',description:'This is my new task',img:'https://picsum.photos/1600/900?v99'})">
+                        <i class="material-icons">
+                            add_circle
+                        </i></button></h1>
             </header>
             <div id="taskContainer">
 

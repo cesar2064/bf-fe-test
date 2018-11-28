@@ -1,7 +1,7 @@
-
 body{
     padding: 10px;
     background-color: whitesmoke;
+    min-width: 500px;
 }
 
 .taskCard{
@@ -10,6 +10,28 @@ body{
     margin-top: 15px;
     border-radius: 10px;
     box-shadow: gray 2px 2px;
+    width: 30%;
+    min-height: 400px;
+    min-width: 400px;
+    margin: 5px;
+}
+
+@media (max-width: 1340px){
+    .taskCard{
+        width: 45%;
+    }
+}
+
+@media (max-width: 910px){
+    .taskCard{
+        width: 100%;
+    }
+}
+
+.taskCard img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .taskLate{
@@ -22,4 +44,15 @@ body{
 
 .taskCard >img{
     width: 160px;
+}
+
+.centered-text{
+    text-align: center;
+}
+
+#taskContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
